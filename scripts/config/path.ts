@@ -13,3 +13,5 @@ export const CORE_PATH = path.resolve(PACKAGES_PATH, 'core')
 export const CORE_SRC = path.resolve(CORE_PATH, 'src')
 
 export const OPERATE_PATH = path.resolve(PACKAGES_PATH, 'operate')
+
+export const DIST_PATH = path.resolve(ROOT_PATH, 'dist')

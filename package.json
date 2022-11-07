@@ -1,7 +1,7 @@
 {
   "name": "rosy-clouds",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.10",
   "packageManager": "pnpm@7.1.2",
   "description": "",
   "author": "TickHeart",
@@ -18,9 +18,9 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.ts.mjs",
+      "types": "./dist/index.ts.d.ts",
+      "require": "./dist/index.ts.mjs"
     }
   },
   "main": "./dist/index.mjs",
@@ -40,7 +40,6 @@
   "scripts": {
     "add": "esno ./scripts/add/index.ts",
     "stub": "unbuild --stub",
-    "build": "unbuild",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "pnpm build",
@@ -48,18 +47,24 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "esno scripts/build/index.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/execa": "^2.0.0",
     "@types/fs-extra": "^9.0.13",
+    "@types/gulp": "^4.0.9",
     "@types/node": "^17.0.45",
     "bumpp": "^7.2.0",
     "eslint": "^8.26.0",
     "esno": "^0.16.3",
+    "execa": "^6.1.0",
+    "fast-glob": "^3.2.12",
     "fs-extra": "^10.1.0",
+    "gulp": "^4.0.2",
     "husky": "^8.0.1",
     "lint-staged": "^12.5.0",
     "pnpm": "^7.14.0",
