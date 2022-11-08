@@ -48,17 +48,17 @@ function createAllCss() {
 }
 
 function createExporterIndexFile() {
-  const coreIndex = './core/core.ts.mjs'
-  const operateIndex = './operate/operate.ts.mjs'
+  const coreIndex = './core/index.ts.mjs'
+  const operateIndex = './operate/index.ts.mjs'
   const body = `export * from '${coreIndex}'\nexport * from '${operateIndex}'`
-  fse.writeFileSync('./dist/index.ts.mjs', body)
+  fse.writeFileSync('./dist/index.mjs', body)
 }
 
 function mergeDTs() {
-  const coreDTs = './core/core.ts.d.ts'
-  const operateDTs = './operate/operate.ts.d.ts'
+  const coreDTs = './core/index.ts.d.ts'
+  const operateDTs = './operate/index.ts.d.ts'
   const body = `export * from '${coreDTs}'\nexport * from '${operateDTs}'`
-  fse.writeFileSync('./dist/index.ts.d.ts', body)
+  fse.writeFileSync('./dist/index.d.ts', body)
 }
 
 function main() {

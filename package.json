@@ -1,7 +1,7 @@
 {
   "name": "rosy-clouds",
   "type": "module",
-  "version": "0.0.10",
+  "version": "0.0.18",
   "packageManager": "pnpm@7.1.2",
   "description": "",
   "author": "TickHeart",
@@ -18,13 +18,14 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/index.ts.mjs",
-      "types": "./dist/index.ts.d.ts",
-      "require": "./dist/index.ts.mjs"
-    }
+      "import": "./dist/index.es.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs.js"
+    },
+    "./*": "./dist/*"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "../dist/index.es.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -35,25 +36,29 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "dist/*.css"
   ],
+  "style": "./dist/index.css",
   "scripts": {
     "add": "esno ./scripts/add/index.ts",
     "stub": "unbuild --stub",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepublishOnly": "pnpm build",
+
     "release": "bumpp --commit --push --tag && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
-    "build": "esno scripts/build/index.ts"
+    "build": "esno scripts/build/index.ts",
+    "build:rollup": "rollup -c rollup.config.js"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/execa": "^2.0.0",
     "@types/fs-extra": "^9.0.13",
     "@types/gulp": "^4.0.9",
@@ -68,6 +73,12 @@
     "husky": "^8.0.1",
     "lint-staged": "^12.5.0",
     "pnpm": "^7.14.0",
+    "rollup": "^3.2.3",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-import-css": "^3.1.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "tsup": "^6.2.3",
     "typescript": "^4.8.4",
     "unbuild": "^0.7.6",
     "unplugin-auto-import": "^0.7.2",
