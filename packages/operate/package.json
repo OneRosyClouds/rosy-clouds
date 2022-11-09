@@ -1,12 +1,41 @@
 {
   "name": "@rosy-clouds/operate",
-  "version": "1.0.0",
+  "type": "module",
+  "private": false,
+  "version": "0.0.6",
+  "packageManager": "pnpm@7.1.2",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "unbuild"
+  "author": "TickHeart",
+  "license": "MIT",
+  "homepage": "https://github.com/OneRosyClouds/rosy-clouds#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneRosyClouds/rosy-clouds"
+  },
+  "bugs": {
+    "url": "https://github.com/OneRosyClouds/rosy-clouds/issues"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "dist/*.css"
+  ],
+  "style": "./dist/index.css",
+  "scripts": {
+    "build": "unbuild",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && npm publish"
+  }
 }
