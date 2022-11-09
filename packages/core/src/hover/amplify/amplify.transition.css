@@ -1,3 +1,12 @@
-.age {
-  counter-reset: 1;
+:root {
+  --hover__amplify__transition__times: 0.3s
+}
+
+.__hover__amplify__transition-enter-active, .__hover__amplify__transition-leave-active {
+  transition-property: all;
+  transition-duration: var(--times, var( --hover__amplify__transition__times));
+  transition-timing-function: ease-in-out;
+}
+.__hover__amplify__transition-enter-to, .__hover__amplify__transition-leave-to {
+  transform: scale(1.1,1.1);
 }

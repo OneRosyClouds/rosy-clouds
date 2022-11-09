@@ -75,5 +75,8 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "dependencies": {
+    "@rosy-clouds/core": "workspace:^0.0.5"
   }
 }
