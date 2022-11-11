@@ -38,5 +38,11 @@
     "postBuild": "esno ./scripts/postBuild.ts",
     "prepublishOnly": "pnpm build",
     "release": "bumpp && npm publish"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.6"
   }
 }

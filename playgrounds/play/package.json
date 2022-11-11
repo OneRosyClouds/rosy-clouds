@@ -1,5 +1,5 @@
 {
-  "name": "@rosy-cloud/playgrounds",
+  "name": "play",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rosy-clouds/core": "workspace:^0.0.5",
+    "@rosy-clouds/core": "workspace:* ",
     "vue": "^3.2.41"
   },
   "devDependencies": {

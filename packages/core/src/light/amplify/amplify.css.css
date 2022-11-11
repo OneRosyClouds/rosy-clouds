@@ -1,0 +1,12 @@
+
+:root {
+  --light__amplify__css__time: 0.3s
+}
+.light__amplify__css:hover {
+  transform: scale(1.1,1.1);
+}
+.light__amplify__css {
+  transition-property: all;
+  transition-duration: var(--times, var(--light__amplify__css__time));
+  transition-timing-function: ease-in-out;
+}

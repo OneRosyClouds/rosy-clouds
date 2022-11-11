@@ -1,2 +1,1 @@
-export * from './hover/amplify/index'
-export * from './hover/bounce/bounce'
+export * from './light/amplify/index'
