@@ -77,6 +77,6 @@
     ]
   },
   "dependencies": {
-    "@rosy-clouds/core": "workspace:^0.0.5"
+    "@rosy-clouds/core": "workspace:* "
   }
 }
