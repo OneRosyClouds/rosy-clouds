@@ -1,6 +1,6 @@
 <script lang='ts' setup>
+import { ref } from 'vue'
 import Amplify from './components/amplify/index.vue'
-import {} from 'vue'
 </script>
 
 <template>

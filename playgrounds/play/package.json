@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rosy-clouds/core": "workspace:* ",
+    "@rosy-clouds/core": "workspace:*",
     "vue": "^3.2.41"
   },
   "devDependencies": {

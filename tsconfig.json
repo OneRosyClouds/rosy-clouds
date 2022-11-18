@@ -19,6 +19,7 @@
     "lib": ["esnext", "dom"],
     "rootDir": ".",
     "declaration": true,
+    "types": ["vitest/globals", "vitest/importMeta"]
   },
-  "exclude": ["node_modules", "dist", "packages/**", "test/**", "scripts/**", "**.config.**"],
+  "exclude": ["node_modules", "dist", "packages/**", "scripts/**", "**.config.**"],
 }
